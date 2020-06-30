@@ -29,36 +29,45 @@ def get_audio():
 
 def spot():
     subprocess.Popen(["/usr/bin/spotify"])
+def code():
+    subprocess.Popen(["/usr/bin/code"])
 
 wake = "hey friday"
 
 while True:
     print("Listening")
     text = get_audio()
+    
     if text.count(wake) > 0:
         speak("I am ready")
         text = get_audio()
 
 
     if "open netflix" in text:
-        firefox_path = "/usr/bin/firefox"
+        chrome_path = "/usr/bin/google-chrome"
         url = "https://www.netflix.com/ph/"
-        webbrowser.get(firefox_path).open(url)
+        webbrowser.get(chrome_path).open(url)
 
     if "open gmail" in text:
-        firefox_path = "/usr/bin/firefox"
+        chrome_path = "/usr/bin/google-chrome"
         url = "https://mail.google.com/mail/u/0/"
-        webbrowser.get(firefox_path).open(url)
+        webbrowser.get(chrome_path).open(url)
 
     if "open messenger" in text:
-        firefox_path = "/usr/bin/firefox"
+        chrome_path = "/usr/bin/google-chrome"
         url = "https://messenger.com/"
-        webbrowser.get(firefox_path).open(url)
+        webbrowser.get(chrome_path).open(url)
 
     if "open youtube" in text:
-        firefox_path = "/usr/bin/firefox"
+        chrome_path = "/usr/bin/google-chrome"
         url = "https://www.youtube.com/"
-        webbrowser.get(firefox_path).open(url)
+        webbrowser.get(chrome_path).open(url)
 
     if "open spotify" in text:
         spot()
+        
+    if "let's code" in text:
+        code()
+        
+    if "exit" in text:
+        exit()
