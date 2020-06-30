@@ -6,14 +6,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Modules needed
 Install these modules on pip
-'''
+```
 pip install playsound
 pip install SpeechRecognition
 pip install gTTS
-'''
+```
 
 ### Directory
 Change the path directory to the respective places. I'm using linux, so my directory is 
-'''
+```
 /usr/bin/app
-'''
+```
