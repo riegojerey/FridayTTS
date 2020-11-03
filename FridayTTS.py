@@ -65,9 +65,7 @@ while True:
 
     if "open spotify" in text:
         spot()
-        
     if "let's code" in text:
         code()
-        
     if "exit" in text:
         exit()
